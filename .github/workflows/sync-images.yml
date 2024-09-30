@@ -1,5 +1,5 @@
 # 工作流名称
-name: Sync-Images-to-DockerHub-Example
+name: Sync-Images-to-DockerHub
 # 工作流运行时显示名称
 run-name: ${{ github.actor }} is Sync Images to DockerHub.
 # 怎样触发工作流
@@ -34,4 +34,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy docker://docker.io/rancher/mysql:v8.0.31 docker://registry.cn-hangzhou.aliyuncs.com/shl-docker-images/mysql:v8.0.31
+        skopeo copy docker://docker.io/rancher/mysql:8.0.31 docker://registry.cn-hangzhou.aliyuncs.com/shl-docker-images/mysql:8.0.31
